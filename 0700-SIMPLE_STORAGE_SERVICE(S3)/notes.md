@@ -141,15 +141,11 @@ _Key Concepts_
 - **Transition** Actions - change the storage class of whichever object or objects are affected
 - **Expiration** Actions - can delete whatever object or objects or object versions are affected
 
-![Screen Shot 2022-11-07 at 3.15.14 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dfb4cb95-3813-4b06-ad34-56cd11c4cb87/Screen_Shot_2022-11-07_at_3.15.14_PM.png)
-
 ### S3 Replication
 
 - Cross-Region Replication (**CRR**)
 - Same-Region Replication (**SRR**)
 - differs depending on whether the buckets are in the same AWS accounts or different AWS accounts
-
-![Screen Shot 2022-11-07 at 3.22.56 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8f86122-0dc9-4c6f-b31d-49e5e6fad252/Screen_Shot_2022-11-07_at_3.22.56_PM.png)
 
 _S3 Replication Options_
 
@@ -177,15 +173,9 @@ _Why use replication…?_
   - Global Resilience Improvements
   - Latency Reduction
 
-### S3 Predesigned URLs
+### S3 PreSigned URLs
 
 - a way to give another person or application access to an object inside an S3 bucket using your credentials in a safe and secure way
-
-![Screen Shot 2022-11-07 at 4.29.16 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9e04f32-52e3-43c4-9a36-ebe3e1cdb2f2/Screen_Shot_2022-11-07_at_4.29.16_PM.png)
-
-![Screen Shot 2022-11-07 at 4.29.34 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e47763e-e0f4-49aa-86d8-768c25f2eeca/Screen_Shot_2022-11-07_at_4.29.34_PM.png)
-
-![Screen Shot 2022-11-07 at 4.29.55 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3ebbbccf-4a2f-480e-be51-7c294afb1dde/Screen_Shot_2022-11-07_at_4.29.55_PM.png)
 
 _Exam PowerUP!_
 
@@ -195,3 +185,48 @@ _Exam PowerUP!_
 - \*\*\*\*… URL stops working when temporary credentials expire…
 
 ### S3 Select and Glacier Select
+
+- are ways to retrieve parts of objects, rather than the entire object
+- you often want to retrieve the **entire object**
+- retrieving a 5TB object... **takes time, uses 5TB**
+- filtering at the client side **doesn't reduce this**
+- S3/Glacier select let you use SQL-Like statements to select part of the object, **pre-filtered by S3**
+- CSV, JSON, Parquet, BZIP2 compression for CSV and JSON
+
+### S3 Events
+
+- allows to create event notification configurations on a bucket
+- **notification** generated when **events** occur in a **bucket**
+- can be delivered to **SNS**, **SQS** and **Lambda** Functions
+- object **created** (Put, Post, Copy, CompleteMultiPartUpload)
+- object **delete** (\*, Delete, DeleteMarkerCreated)
+- object **restore** (Post (Initiated), Completed)
+- **replication** (OperationMissedThreshold, OperationReplicatedAfterTHreshold, OperationNotTracked, OperationFailedReplication)
+
+### S3 Access Logs
+
+(in learning aid)
+
+### S3 Object Lock
+
+- object lock enabled on 'new' buckets (Support req for existing)
+- write-once-read-many (**WORM**) - **No Delete, No Overwrite**
+- requires **versioning** - **individual versions** are locked
+- can have **Both**, **One**, or **the other**, or **none**
+  - 1 - **Retention** Period
+    - specify **DAYS** & **YEARS** - A Retention Period
+    - **COMPLIANCE** mode - **Can't** be **adjusted**, **deleted**, **overwritten**
+      -... **even by the account root user**
+      - **until retention expires**
+      - might use for legal issue like for drug data
+    - **GOVERNANCE** mode - special **permissions** can be granted **allowing lock settings to be adjusted**
+      - **s3:BypassGovernanceRetention**
+      - ... **x-amz-bypass-governance-retention:true** (console default)
+      - useful to prevent accidental deletion, process reasons or governance reasons to keep object versions, test of settings before picking the compliance mode
+  - 2 - **Legal Hold**
+    - set on an **object version** - **ON** or **OFF**
+    - no retention
+    - **NO Deletes** or **Changes** until removed
+    - **s3:PutObjectLegalHold** is required to add or remove
+    - prevent accidental deletion of critical object versions
+- a bucket can have **default Object Lock Settings**
