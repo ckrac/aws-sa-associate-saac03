@@ -105,8 +105,6 @@ _Key Concepts_
 - can create aliases - shortcuts to keys
   - per region
 
-![Screen Shot 2022-11-02 at 5.36.15 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2a8dc953-5dc0-4344-a796-3ca85f2e5547/Screen_Shot_2022-11-02_at_5.36.15_PM.png)
-
 ### Object Encryption
 
 - buckets aren’t encrypted… **objects** are…
