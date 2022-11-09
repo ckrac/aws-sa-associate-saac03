@@ -5,27 +5,21 @@
 - S3 is private **by default**
   - default only the account root user of the account which owns that bucket
 - S3 Bucket Policies
+
   - a form of resource policy
   - like identity policies, but attached to a bucket
   - resource perspective permissions (who can access that resource)
   - allow/deny same or **different** accounts
   - allow/deny **anonymous** principals
 
-![Screen Shot 2022-10-30 at 2.55.44 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21ae2ac7-d753-4af1-b680-630a99623483/Screen_Shot_2022-10-30_at_2.55.44_PM.png)
-
 - Access Control Lists (ACLs)
+
   - ACLs on **objects** and **bucket**
   - a subresource
   - legacy
   - inflexible & simple permissions
 
-![Screen Shot 2022-10-30 at 3.03.53 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/99faf172-af62-497a-a034-e34e5a688ac7/Screen_Shot_2022-10-30_at_3.03.53_PM.png)
-
 - a fail-safe
-
-_Summary_
-
-![Screen Shot 2022-10-30 at 3.04.55 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b48a326f-a67c-43c1-9f00-6f0d2476ea33/Screen_Shot_2022-10-30_at_3.04.55_PM.png)
 
 ### S3 Static Hosting
 
@@ -41,15 +35,9 @@ _Summary_
 - start of in a disabled state
 - once enabled, can’t disable it again, but can suspend it
 
-  ![Screen Shot 2022-10-30 at 3.35.16 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1abb8f4f-3405-49f3-b0a0-4015e84741fd/Screen_Shot_2022-10-30_at_3.35.16_PM.png)
-
 - versioning lets you store **multiple versions** of objects within a bucket. Operations that would modify objects **generate a new version**
 
-  ![Screen Shot 2022-10-30 at 3.39.30 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ca0ad95-c557-494c-8007-83aaa1079db9/Screen_Shot_2022-10-30_at_3.39.30_PM.png)
-
   To permanently delete, specify the id value
-
-  ![Screen Shot 2022-10-30 at 3.40.01 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8a20c30-60f7-46b0-9f16-f274d57dccd3/Screen_Shot_2022-10-30_at_3.40.01_PM.png)
 
 - …**cannot be switched** off - only suspended
 - space is consumed by ALL versions
