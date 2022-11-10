@@ -27,3 +27,9 @@ _VPC Proposal_
 - start a 10.16 (US1), 10.32 (US2), 10.48 (US3), 10.64 (EU), 10.80 (Aus) - each AWS account has 1/4th
 - **/16** per VPC - 3 AZ (+1), 3 Tiers (+1) - **16** subnets
 - **/16** split into 16 subnets = **/20** per subnet (4091 IPs)
+
+### Custom VPCs
+
+- regional service - All AZs in the region
+- isolated network
+- nothing **IN** or **OUT** without explicit configuration
