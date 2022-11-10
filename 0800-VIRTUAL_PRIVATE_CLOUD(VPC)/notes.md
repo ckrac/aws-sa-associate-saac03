@@ -19,3 +19,11 @@ _VPC Considerations_
 - reserve 2+ networks per region being used per account
   - e.g. 3 US, Europe, Australia - Assume 4 accounts (total-regions x 2 \* number-of-accounts) = 40 ranges (ideally)
   - 10.16 - 10.127
+
+_VPC Proposal_
+
+- Animals4life could become a **huge** global entity
+- Use the **10.16 -> 10.127** range (avoiding google)
+- start a 10.16 (US1), 10.32 (US2), 10.48 (US3), 10.64 (EU), 10.80 (Aus) - each AWS account has 1/4th
+- **/16** per VPC - 3 AZ (+1), 3 Tiers (+1) - **16** subnets
+- **/16** split into 16 subnets = **/20** per subnet (4091 IPs)
