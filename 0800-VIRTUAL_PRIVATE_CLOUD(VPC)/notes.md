@@ -33,3 +33,19 @@ _VPC Proposal_
 - regional service - All AZs in the region
 - isolated network
 - nothing **IN** or **OUT** without explicit configuration
+- flexible configuration - simple or multi-tier
+- supports hybrid networking - other cloud & on-premises
+- option to pick **default** or **dedicated tenancy!**
+  - controls whether the resources created inside the VPC are provisioned on shared hardware or dedicated hardware
+- can use IPv4 Private CIDR Blocks & Public IPs
+- a VPC is allocated 1 primary private IPv4 CIDR Block
+  - has two main restrictions... Min **/28** (16 IP) Max **/16** (65,536)
+- optional secondary IPv4 Blocks
+- can be configured to use single **assigned** IPv6 **/56** CIDR Block
+
+_DNS in a VPC_
+
+- provided by R53
+- VPC `Base IP +2` Address e.g. if VPC is 10.0.0.0, then the DNS IP will be 10.0.0.2
+- **enableDnsHostnames** - gives instances DNS Names (indicates whether instances with public IP addresses in a VPC are given public DNS host names)
+- **enableDnsSupport** - enables DNS resolution in VPC (indicates if DNS is enabled or enabled)
