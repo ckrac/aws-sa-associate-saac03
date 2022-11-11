@@ -49,3 +49,7 @@ _DNS in a VPC_
 - VPC `Base IP +2` Address e.g. if VPC is 10.0.0.0, then the DNS IP will be 10.0.0.2
 - **enableDnsHostnames** - gives instances DNS Names (indicates whether instances with public IP addresses in a VPC are given public DNS host names)
 - **enableDnsSupport** - enables DNS resolution in VPC (indicates if DNS is enabled or enabled)
+
+### VPC Subnets
+
+- subnets are what services run from inside VPCs and they're how you add structure, functionality, and resilience to VPCs
