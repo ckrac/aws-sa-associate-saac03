@@ -53,3 +53,45 @@ _DNS in a VPC_
 ### VPC Subnets
 
 - subnets are what services run from inside VPCs and they're how you add structure, functionality, and resilience to VPCs
+- **AZ Resilient**
+- a **subnetwork** of a VPC - **within a particular AZ**
+- 1 Subnet => 1 AZ, 1 AZ => 0 + Subnets (subnet can never be in multiple AZ)
+- IPv4 CIDR is a subset of the VPC CIDR
+- cannot overlap with other subnets
+- optional IPv6 CIDR (/64 subset of the /56 VPC - space for 256)
+- subnets can communicate with other subnets in the VPC
+
+_Subnet IP Addressing_
+
+- Reserved IP addresses in a subnet (5 in total)
+- eg. 10.16.16.0/20 (10.16.16.0 => 10.16.31.255)
+
+1. **network** address (10.16.16.0)
+2. **network +1** (10.16.16.1) - used by VPC Router
+3. **network +2** (10.16.16.2) - Reserved (DNS\*)
+4. **network +3** (10.16.16.3) - Reserved Future Use
+5. **broadcast** address 10.16.31.255 (Last IP in subnet)
+
+### VPC Routing and Internet Gateway
+
+- every VPC has a VPC Router - Highly available
+- in every subnet... `network+1` address
+- routes traffic between subnets
+- controlled by `route tables` each subnet has one
+- a VPC has a **Main** route table - subnet default
+
+_Internet Gateway (IGW)_
+
+- **region resilient** gateway attached to a VPC
+- 1 to 1 relationship, 1 VPC = 0 or 1 IGW, 1 IGW = 0 or 1 VPC
+- runs from within the AWS Public Zone
+- gateways traffic between the VPC and the Internet or AWS Public Zone (S3...SQS...SNS...etc)
+- managed - AWS handles performance
+
+_Bastion Host / Jumpbox_
+
+- bastion host = jumpbox
+- an instance in a public subnet
+- incoming management connections arrive there
+- then access internal VPC resources
+- often the only way IN to a VPC
