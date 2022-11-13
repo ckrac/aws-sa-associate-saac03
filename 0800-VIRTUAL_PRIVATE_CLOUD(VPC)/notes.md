@@ -95,3 +95,19 @@ _Bastion Host / Jumpbox_
 - incoming management connections arrive there
 - then access internal VPC resources
 - often the only way IN to a VPC
+
+### Stateful vs Stateless Firewalls
+
+StatefulvsStatless 00_LEARNINGAIDS
+
+### Network Access Control Lists (NACL)
+
+- can be thought of as a traditional firewall available within AWS VPCs
+- **stateless** - **REQUEST** and **RESPONSE** seen as different
+- only impacts **data crossing subnet boundary**
+- NACLs can **EXPLICITLY ALLOW** and **DENY**
+- IPs/CIDR, Ports & protocols - no logical resources
+- NACLs cannot be assigned to AWS resources - **only subnets**
+- use together with Security Groups to add explicit DENY (Bad IPs/Nets)
+- each subnet can have **one NACL** (Default or Custom)
+- a NACL can be associated with **MANY Subnets**
