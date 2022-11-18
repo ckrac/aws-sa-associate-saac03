@@ -111,3 +111,13 @@ StatefulvsStatless 00_LEARNINGAIDS
 - use together with Security Groups to add explicit DENY (Bad IPs/Nets)
 - each subnet can have **one NACL** (Default or Custom)
 - a NACL can be associated with **MANY Subnets**
+
+### Security Groups
+
+- **STATEFUL** - **detect response** traffic **automatically**
+- **Allowed** (IN or OUT) **request** = **allowed response**
+- **NO EXPLICIT DENY**... only ALLOW or Implicit DENY
+- ...**can't block specific bad actors**
+- supports IP/CIDR and **logical resources**
+- ...including other **security groups** AND ITSELF
+- Attached to ENI's (elastic network interface) not instances (even if the UI shows it this way)
