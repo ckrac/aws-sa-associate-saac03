@@ -121,3 +121,21 @@ StatefulvsStatless 00_LEARNINGAIDS
 - supports IP/CIDR and **logical resources**
 - ...including other **security groups** AND ITSELF
 - Attached to ENI's (elastic network interface) not instances (even if the UI shows it this way)
+
+### Network Address Translation (NAT) & NAT Gateway
+
+_What is NAT?_
+
+- Network Address Translation (**NAT**)
+- a set of processes - remapping SRC or DST IPs
+- **IP masquerading** - hiding CIDR Blocks behind on IP
+  - popular because IPv4 Addresses running out
+- gives Private CIDR range **outgoing** internet\* access
+
+_NAT Gateways_
+
+- runs from a **public subnet**
+- uses **Elastic IPs** (Static IPv4 Public)
+- _AZ resilient Service_ (HA in that AZ)
+- for region resilience - **NATGW in each AZ**... RT in for each AZ with that NATGW as target
+- managed, scales to 45 Gbps, $ Duration & Data Volume
