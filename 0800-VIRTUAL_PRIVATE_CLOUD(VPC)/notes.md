@@ -139,3 +139,12 @@ _NAT Gateways_
 - _AZ resilient Service_ (HA in that AZ)
 - for region resilience - **NATGW in each AZ**... RT in for each AZ with that NATGW as target
 - managed, scales to 45 Gbps, $ Duration & Data Volume
+
+_What about IPv6_
+
+- NAT isn't required for IPv6
+- all IPv6 addresses in AWS are publicly routable
+- the Internet Gateway works with ALL IPv6 IPs directly
+- NAT Gateways **don't work with IPv6**
+- ::/0 Route + IGW for bi-directional connectivity
+- ::/0 Route + Egress-Only Internet Gateway - Outbound Only
