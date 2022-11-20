@@ -44,3 +44,7 @@ https://ec2instances.info/
 https://aws.amazon.com/ec2/instance-types/
 
 General overview of type and when to use - EC2InstanceTypes-2.png
+
+### EC2 SSH vs EC2 Instance Connect
+
+connect via EC2 Connect per region when enabling certain inbound IPs for EC2 Instance https://ip-ranges.amazonaws.com/ip-ranges.json
