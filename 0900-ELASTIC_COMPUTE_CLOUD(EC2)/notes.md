@@ -68,3 +68,15 @@ StorageRefresher-1.png
 _Storage Performance_
 
 StorageRefresher-2.png
+
+### Elastic Block Store (EBS)
+
+- a service that provides block storage
+- **Block** Storage - **raw** disk allocations (**volume**) - Can be encrypted using **KMS**
+- ...instances see **block device** and create **file system** on this device (ext3/4, xfx)
+- storage is provisioned in **ONE AZ** (Resilient **in that AZ**)
+- attached to one EC2 Instance (or other service) over a storage network
+- can be **detached** and **reattached**, not lifecycle linked to one instance... **persistent**
+- **snapshot** (backup) into **S3**. Create volume from snapshot (migrate **between AZs**)
+- can provision volumes based on different physical storage **types**, different **sizes**, different **performance profiles**
+- billed based on **GB-month** (and in some cases **performance**)
