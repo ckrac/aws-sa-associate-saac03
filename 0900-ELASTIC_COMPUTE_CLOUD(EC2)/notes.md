@@ -80,3 +80,15 @@ StorageRefresher-2.png
 - **snapshot** (backup) into **S3**. Create volume from snapshot (migrate **between AZs**)
 - can provision volumes based on different physical storage **types**, different **sizes**, different **performance profiles**
 - billed based on **GB-month** (and in some cases **performance**)
+
+### EBS Volume Types - General Purpose
+
+EBSVolumes-[1-2].png
+
+### EBS Volume Types - Provisioned IOPS
+
+EBSVolumes-3.png
+
+### EBS Volume Types - HDD-Based
+
+EBSVolumes-4.png
