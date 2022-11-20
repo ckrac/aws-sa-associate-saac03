@@ -48,3 +48,23 @@ General overview of type and when to use - EC2InstanceTypes-2.png
 ### EC2 SSH vs EC2 Instance Connect
 
 connect via EC2 Connect per region when enabling certain inbound IPs for EC2 Instance https://ip-ranges.amazonaws.com/ip-ranges.json
+
+### Storage Refresher
+
+- **Direct** (local) attached Storage - Storage on the EC2 Host
+  - problems - if disk or hardware fails, EC2 instance moves between hosts, the storage can be lost
+- **Network** attached Storage - Volumes delivered over the network (EBS - Elastic Block Store)
+  - generally high resilient and is separate from the Instance hardware
+- **Ephemeral** Storage - Temporary Storage
+- **Persistent** Storage - Permanent Storage - lives on past the lifetime of the instance
+  - e.g. network attached storage by EBS
+
+_Three categories of storage in AWS_
+
+- how the storage is presented either to you or to a server and what it can be used for
+
+StorageRefresher-1.png
+
+_Storage Performance_
+
+StorageRefresher-2.png
