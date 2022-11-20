@@ -38,4 +38,9 @@ _Five Main Categories_
 - **Accelerated Computing** - Hardware GPU, field programmable gate arrays (FGPAs)
 - **Storage Optimized** - Sequential and Random IO - scale-out transactional databases, data warehousing, Elasticsearch, analytics workloads
 
-Decoding EC2 Types - EC2InstanceTypes.png
+Decoding EC2 Types - EC2InstanceTypes-1.png
+
+https://ec2instances.info/
+https://aws.amazon.com/ec2/instance-types/
+
+General overview of type and when to use - EC2InstanceTypes-2.png
