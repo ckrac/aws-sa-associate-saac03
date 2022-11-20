@@ -21,3 +21,21 @@ _What's EC2 Good for?_
 - ...either **burst** or **steady-state** load
 - **monolithic** application stacks
 - **migrated** application workloads or **disaster recovery**
+
+### EC2 Instance Type
+
+- **Raw** CPU, Memory, Local Storage Capacity & Type
+- **Resource Ratios**
+- **Storage** and **Data** Network **Bandwidth**
+- System Architecture / Vendor
+- Additional Features and Capabilities
+
+_Five Main Categories_
+
+- **General Purpose** - Default - Diverse workloads, equal resource ratio
+- **Compute Optimized** - Media Processing, HPC, Scientific Modelling, gaming, Machine Learning
+- **Memory Optimized** - Processing large in-memory datasets, some database workloads
+- **Accelerated Computing** - Hardware GPU, field programmable gate arrays (FGPAs)
+- **Storage Optimized** - Sequential and Random IO - scale-out transactional databases, data warehousing, Elasticsearch, analytics workloads
+
+Decoding EC2 Types - EC2InstanceTypes.png
