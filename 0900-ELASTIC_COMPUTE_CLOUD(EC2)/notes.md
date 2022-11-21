@@ -123,3 +123,11 @@ _important to remember figures_
 
 InstanceStorevsEBS-1.png
 InstanceStorevsEBS-2.png
+
+### Snapshots, Restore & Fast Snapshot Restore (FSR)
+
+- snapshots are incremental volume copies to **S3**
+- the first is a **full copy** of 'data' on the volume
+- future snaps are **incremental** (delta of data between snapshots)
+- volumes can be created (restored) from snapshots
+- snapshots can be copied to another region
