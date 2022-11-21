@@ -92,3 +92,34 @@ EBSVolumes-3.png
 ### EBS Volume Types - HDD-Based
 
 EBSVolumes-4.png
+
+### Instance Store Volumes - Architecture
+
+- provide **Block Storage** Devices
+- physically connected to **one EC2 Host**
+- instances **on that host** can access them
+- highest storage performance in AWS
+- included in instance price...
+- **ATTACHED AT LAUNCH**
+
+InstanceStoreVolumes.png
+
+- D3 = 4.6 GB/s throughput
+- I3 = 16 GB/s of sequential throughput
+- **More IOPS and Throughput vs EBS**
+
+_Summary_
+
+- local on **EC2 Host**
+- add at **launch only**
+- lost on instance **move**, **resize** or **hardware failure**
+- high performance
+- you pay for it anyway - included in instance price
+- **TEMPORARY**
+
+### Choosing between EC2 Instance Store and EBS
+
+_important to remember figures_
+
+InstanceStorevsEBS-1.png
+InstanceStorevsEBS-2.png
