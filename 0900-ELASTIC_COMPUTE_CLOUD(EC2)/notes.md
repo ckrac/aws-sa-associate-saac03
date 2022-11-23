@@ -131,3 +131,14 @@ InstanceStorevsEBS-2.png
 - future snaps are **incremental** (delta of data between snapshots)
 - volumes can be created (restored) from snapshots
 - snapshots can be copied to another region
+
+_Architecture_
+EBSSnapshots-1.png
+EBSSnapshots-2.png
+
+- new EBS volume - **full performance immediately**
+- **snaps restore lazily** - fetched gradually
+- requested blocks are fetched immediately
+- force a read of all data immediately...
+- Fast Snapshot Restore (**FSR**) - Immediate restore
+  - ...up to **50** snaps per region. Set on the **Snap & AZ**
