@@ -142,3 +142,14 @@ EBSSnapshots-2.png
 - force a read of all data immediately...
 - Fast Snapshot Restore (**FSR**) - Immediate restore
   - ...up to **50** snaps per region. Set on the **Snap & AZ**
+
+### EBS Encryption
+
+EBSEncryption-[1-2].png
+
+- accounts can be set to **encrypt by default** - **default KMS Key**
+- otherwise **choose a KMS Key** to use
+- each volume uses **1 unique DEK** (data encryption key)
+- **snapshots** & **future volumes** use the **same DEK**
+- can;t change a volume to **NOT** be encrypted
+- OS isn't aware of the encryption ... **no performance loss**
