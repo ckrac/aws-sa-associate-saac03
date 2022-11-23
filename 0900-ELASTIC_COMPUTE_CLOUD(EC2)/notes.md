@@ -153,3 +153,14 @@ EBSEncryption-[1-2].png
 - **snapshots** & **future volumes** use the **same DEK**
 - can;t change a volume to **NOT** be encrypted
 - OS isn't aware of the encryption ... **no performance loss**
+
+### Network Interfaces, Instance IPs and DNS
+
+EC2networking-[1-2].png
+
+- secondary ENI + MAC = **Licensing**
+- multi-homed (subnets) Management & Data
+- different security groups - **multiple interfaces**
+- OS - **Doesn't see public IPv4**
+- IPv4 Public IPs are **Dynamic**... Stop & Start = **Change**
+- public DNS = **private IP in VPC**, public IP everywhere else
