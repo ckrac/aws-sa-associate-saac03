@@ -164,3 +164,21 @@ EC2networking-[1-2].png
 - OS - **Doesn't see public IPv4**
 - IPv4 Public IPs are **Dynamic**... Stop & Start = **Change**
 - public DNS = **private IP in VPC**, public IP everywhere else
+
+### Amazon Machine Images (AMI)
+
+- one way to create a template of an instance configuration and use that template to create many instances
+- AMI's can be used to **launch EC2** instance
+- **AWS** or **Community** Provided
+- Marketplace (can include **commercial software**)
+- **regional**... **unique ID** e.g. ami-0a887e401f7654935
+- controls permissions (public, your account, specific accounts)
+- you can create an AMI from an EC2 instance you want to template
+
+AMILifecyle.png
+
+- **AMI** = One Region, only works in that one region
+- **AMI Baking**... creating an AMI from a configured instance + application
+- an **AMI can't be edited**... launch instance, update configuration and make a new AMI
+- can be copied **between regions** (includes its snapshots)
+- remember permissions... **default = your account**
