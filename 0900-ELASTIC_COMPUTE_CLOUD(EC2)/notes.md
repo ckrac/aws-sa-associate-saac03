@@ -182,3 +182,11 @@ AMILifecyle.png
 - an **AMI can't be edited**... launch instance, update configuration and make a new AMI
 - can be copied **between regions** (includes its snapshots)
 - remember permissions... **default = your account**
+
+### EC2 Purchase Options (Launch Types)
+
+EC2PurchaseOptions-[1-5].png
+
+### Reserved Instances
+
+EC2ReservedInstances-[1-3].png
