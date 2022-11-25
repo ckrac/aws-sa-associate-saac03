@@ -190,3 +190,28 @@ EC2PurchaseOptions-[1-5].png
 ### Reserved Instances
 
 EC2ReservedInstances-[1-3].png
+
+### Instance Status Checks & Auto Recovery
+
+InstanceStatusChecks.png
+
+### Horizontal vs Vertical Scaling
+
+EC2Scaling-[1-3].png
+
+_Vertical Scaling_
+
+- each resize requires a reboot - **disruption**
+- larger instances often carry a **$ premium**
+- there is an upper cap on performance - **instance size**
+- **no application modification** required
+- works for ALL applications - **even Monoliths**
+
+_Horizontal Scaling_
+
+- sessions, sessions, sessions (very important, session state is store in one instance. Different session when user interfaces with a different instance)
+- requires application support OR **off-host sessions** (session/data store in db)
+- **no disruption** when scaling
+- **no limit** to scaling
+- often less expensive - **no large instance premium**
+- more granular
