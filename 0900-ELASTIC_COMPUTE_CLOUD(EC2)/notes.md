@@ -215,3 +215,9 @@ _Horizontal Scaling_
 - **no limit** to scaling
 - often less expensive - **no large instance premium**
 - more granular
+
+### Instance Metadata
+
+EC2InstanceMetadata.png
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html
