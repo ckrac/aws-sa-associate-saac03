@@ -49,3 +49,15 @@ _Concepts_
 - **task definition** - security (task role), container(s), resources
 - **task role** - IAM Role which the TASK assumes
 - **service** - how many copies, high availability, restarts
+
+### ECS - Cluster Mode
+
+ECS-ClusterMode-[1-2].png
+
+EC2 vs ECS (EC2) vs Fargate
+
+- if you use containers ... use **ECS**
+- **large** workload - **price** conscious - **EC2 Mode**
+- **large** workload - **overhead** conscious - **Fargate**
+- **small** / **burst** workloads - **Fargate**
+- **batch** / **periodic** workloads - **Fargate**
