@@ -61,3 +61,20 @@ EC2 vs ECS (EC2) vs Fargate
 - **large** workload - **overhead** conscious - **Fargate**
 - **small** / **burst** workloads - **Fargate**
 - **batch** / **periodic** workloads - **Fargate**
+
+### Elastic Container Registry (ECR)
+
+- managed **container image registry** service
+- like **docker hub** but for **AWS**
+- each **AWS** account has a **public** and **private** registry
+- each **registry** can have many **repositories**
+- each **repository** can contain many **images**
+- **images** can have several **tags**
+- **public** = public R/O ... R/W requires permissions
+- **private** = permissions required for any R/O or R/W
+- integrated with **IAM** - **Permissions**
+- image scanning, **basic** and **enhanced**(inspector) - scans issues with both operating systems and any software packages within your containers
+- nr real-time **Metrics** => **CW** (auth, push, pull)
+- **API** actions = **CloudTrail**
+- **events** => **EventBridge**
+- replication... cross-region and cross-account
