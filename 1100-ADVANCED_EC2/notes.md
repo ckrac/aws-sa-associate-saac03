@@ -22,3 +22,14 @@ _User Data Key Points_
 How quick is it ready for service?
 
 EC2Bootstrapping-2.png
+
+### Enhanced Bootstrapping with CFN-INIT
+
+- a way to pass complex bootstrapping instructions into an EC2 instance
+- **cfn-init** helper script - installed on EC2 OS
+- simple configuration management system
+- procedural (user data) vs desired stater (cfn-init)
+- can update packages, groups, users, sources, files, commands and services
+- provided with directives via **Metadata** and **AWS::CloudFOrmation::Init** on a CFN resource
+
+CFN-INIT-[1-2].png
