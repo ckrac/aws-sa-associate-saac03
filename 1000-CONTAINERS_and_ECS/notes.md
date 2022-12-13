@@ -99,4 +99,12 @@ _Summary_
 
 ### Elastic Kubernetes Service (EKS) 101
 
--
+- **AWS Managed Kubernetes** - open source & **cloud agnostic**
+  -...AWS, Outposts, EKS Anywhere, EKS Distro
+- control plane scales and runs on multiple AZs
+- **integrates** with **AWS services**... ECR, ELB, IAM, VPC
+- **EKS Cluster** = EKS **Control Plane** & EKS **Nodes**
+- **etcd** distributed across **multiple AZs**
+- **nodes** - can be handled **Self** Managed, **Managed node groups** or **Fargate** pods
+- if you need windows, GPU, Inferentia, Bottlerocket, Outposts, Local zones... Check node type
+- **storage providers** - include... EBS, EFS, FSx Lustre, FSx for NetApp ONTAP
