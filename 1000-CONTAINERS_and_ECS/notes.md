@@ -78,3 +78,25 @@ EC2 vs ECS (EC2) vs Fargate
 - **API** actions = **CloudTrail**
 - **events** => **EventBridge**
 - replication... cross-region and cross-account
+
+### Kubernetes 101
+
+- open source container system use to automate the deployment, scaling, and management of containerized applications
+
+Kubernetes101-[1-2].png
+
+_Summary_
+
+- **cluster** - a deployment of Kubernetes, management, orchestration...
+- **node** - resources: pods are placed on nodes to run
+- **pod** - 1+ containers; smallest unit in kubernetes; often 1 container 1 pod
+- **service** - abstraction, service running on 1 or more pods
+- **job** - ad-hoc, creates one or more pods until completion
+- **ingress** - exposes a way into a service (**Ingress** => **Routing** => **Service** => 1+ **Pods**)
+- **ingress controller** - used to provide ingress (e.g. AWS LB Controller uses ALB/NLB, NGINX, etc.)
+- **job** - ad-hoc, creates one or more pods until completion
+- **persistent** storage (**PV**) - volumes whose lifecycle lives beyond any 1 pod using it
+
+### Elastic Kubernetes Service (EKS) 101
+
+-
