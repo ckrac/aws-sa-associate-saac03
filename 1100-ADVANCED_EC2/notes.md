@@ -33,3 +33,13 @@ EC2Bootstrapping-2.png
 - provided with directives via **Metadata** and **AWS::CloudFOrmation::Init** on a CFN resource
 
 CFN-INIT-[1-2].png
+
+### EC2 Instance Roles & Profile
+
+EC2InstanceRoles-1.png
+
+- credentials are inside meta-data
+- iam/security-credentials/**role-name**
+- automatically rotated - always valid
+- should always be used rather than adding access keys into instance
+- CLI tools will use ROLE credentials automatically
