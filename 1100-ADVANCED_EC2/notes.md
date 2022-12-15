@@ -58,3 +58,14 @@ EC2InstanceRoles-1.png
 - public parameters - **Latest AMIs per region**
 
 SSMParameterStore.png
+
+### System and Application Logging on EC2
+
+_Logging on EC2_
+
+- CloudWatch is for metrics
+- CloudWatch Logs is for logging
+- neither natively capture **data inside an instance**
+- CloudWatch Agent is required... plus **configuration** and **permissions**
+
+LoggingonEC2CWAgent.png
