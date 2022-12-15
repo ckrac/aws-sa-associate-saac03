@@ -43,3 +43,18 @@ EC2InstanceRoles-1.png
 - automatically rotated - always valid
 - should always be used rather than adding access keys into instance
 - CLI tools will use ROLE credentials automatically
+
+### SSM Parameter Store
+
+- the SSM Parameter store is a service which is part of Systems Manager which allows the storage and retrieval of parameters - string, stringlist or secure string
+- the service supports encryption which integrates with KMS, versioning and can be secured using IAM
+- the service integrates with many AWS services and can be accessed using the CLI/APIs from anywhere with access to the AWS Public Spare Endpoints
+
+- storage for **configuration** & **secrets**
+- string, stringlist & secure string
+- license codes, database strings, full configs & passwords
+- hierarchies & versioning
+- plaintext and ciphertext
+- public parameters - **Latest AMIs per region**
+
+SSMParameterStore.png
