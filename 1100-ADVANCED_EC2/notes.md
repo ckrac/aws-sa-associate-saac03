@@ -125,3 +125,21 @@ _Limitations & Features_
 - **Amazon RDS** instances are not supported
 - **Placement groups** are not supported for Dedicated Hosts
 - hosts can be shared with other ORG Accounts... **RAM** product
+
+## Enhanced Networking & EBS Optimized
+
+- Enhanced networking is the AWS implementation of SR-IOV, a standard allowing a physical host network card to present many logical devices which can be directly utilized by instances
+- This means lower host CPU usage, better throughput, lower and consistent latency
+- EBS optimisation on instances means dedicated bandwidth for storage networking - separate from data networking
+
+_Enhanced Networking_
+
+EC2EnhancedNetworking.png
+
+_EBS Optimized_
+
+- **EBS** = Block storage over the _network_
+- historically network was **shared**... **data** and **EBS**
+- EBS optimized means **dedicated capacity** for EBS
+- most instances **support** and have **enabled by default**
+- in older in instances some support, but enabling costs extra
