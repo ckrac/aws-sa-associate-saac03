@@ -69,3 +69,39 @@ _Logging on EC2_
 - CloudWatch Agent is required... plus **configuration** and **permissions**
 
 LoggingonEC2CWAgent.png
+
+### EC2 Placement Groups
+
+- three types of placement groups
+
+PlacementGroups-1.png
+
+- **Cluster** - Pack instances close together
+  - offer little resistance because if hardware goes down, all ec2 instances goes down
+  - can't span AZs - **ONE AZ ONLY** - locked when launching first instance
+  - can span VPC peers - but impacts performance
+  - requires a supported instance type
+  - use the same type of instance (**not mandatory**)
+  - launch at the same time (**not mandatory**, **very recommended**)
+  - **10Gbps single stream performance**
+  - **use cases: performance, fast speeds, low latency**
+
+PlacementGroups-2.png
+
+- **Spread** - Keep instances separated (using different hardware)
+  - provides infrastructure isolation
+  - ...each **INSTANCE** runs from a different rack
+  - each rack has its own **network** and **power** source
+  - **7 Instances per AZ** (HARD LIMIT)
+  - not supported for dedicated instances or hosts
+  - **use case**: small number of critical instances that need to be kept separated from each other (offers high resilience and availability)
+
+PlacementGroups-3.png
+
+- **Partition** - groups of instances spread apart (for distributed and replicated applications which have infrastructure awareness)
+  - **7 Partitions per AZ**
+  - instances can be placed in **a specific partition**
+  - ...or auto placed
+  - great for topology aware applications
+  - ...HDFS, HBase, and Cassandra
+  - contain the impact of failure to part of an application
