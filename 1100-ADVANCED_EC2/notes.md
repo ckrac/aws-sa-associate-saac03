@@ -105,3 +105,23 @@ PlacementGroups-3.png
   - great for topology aware applications
   - ...HDFS, HBase, and Cassandra
   - contain the impact of failure to part of an application
+
+### Dedicated Hosts
+
+- EC2 Host **dedicated to you**
+- specific family e.g. a1, c5, m5
+- **no instance charges**... you pay for the host
+- can pay on-demand & reserved options available
+- host hardware has **physical sockets and cores**
+
+  - dictates how many instances can be run on that host
+  - software which is licensed based on physical sockets or cores can utilize this visibility of the hardware
+
+  DedicatedHosts-[1-2].png
+
+_Limitations & Features_
+
+- **AMI Limits** - RHEL, SUSE Linux, and Windows AMIs aren't supported
+- **Amazon RDS** instances are not supported
+- **Placement groups** are not supported for Dedicated Hosts
+- hosts can be shared with other ORG Accounts... **RAM** product
