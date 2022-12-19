@@ -16,3 +16,15 @@
 - externally registered domains can point at R53 Public Zone (e.g. use GoDaddy to register a domain, add those name servers into the DNS system)
 
 PublicHostedZones-1.png
+
+### R53 Private Hosted Zones
+
+- a **public** hosted zone... **which isn't public**
+- associated with **VPCs**
+- ...**only accessible** in those **VPCs**
+- ...using **different accounts** is supported Via **CLI**/**API**
+- split-view (overlapping **public** & **private**) for **PUBLIC** and **INTERNAL** use with the same zone name
+
+PrivateHostedZones-1.png
+
+SplitView.png
