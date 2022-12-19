@@ -50,3 +50,9 @@ _ALIAS Records_
 - for **AWS Services** - **default** to picking **ALIAS**
 - should be the same "Type" as what the record is pointing at
 - API Gateway, CloudFront, Elastic Beanstalk, ELB, Global Accelerator & S3
+
+### Simple Routing
+
+- Simple routing lets you configure standard DNS records, with no special Route 53 routing such as weighted or latency. With simple routing, you typically route traffic to a single resource, for example, to a web server for your website
+
+Route53SimpleRouting-1.png
