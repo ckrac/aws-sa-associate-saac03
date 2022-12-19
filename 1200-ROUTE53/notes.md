@@ -28,3 +28,25 @@ PublicHostedZones-1.png
 PrivateHostedZones-1.png
 
 SplitView.png
+
+### CNAME vs R53 Alias
+
+_Problems using only CNAME_
+
+- "A" maps a **NAME** to an **IP Address**
+- ...**catagram.io** => **1.3.3.7**
+- **CNAME** maps a **NAME** to another **NAME**
+- ...**www.catagram.io** => **catagram.io**
+- CNAME is **invalid for naked/apex** (catagram.io)
+- many AWS services use a DNS Name (ELBs - elastic load balancer don't give an ip address but a DNS name)
+- with just CNAME - **catagram.io** => **ELB would be invalid**
+
+_ALIAS Records_
+
+- **ALIAS** records map a **NAME** to an **AWS resource**
+- can be used both for **naked**/**apex** and **normal** records
+- for non apex/naked - functions like **CNAME**
+- there is no charge for **ALIAS** requests pointing at **AWS resources**
+- for **AWS Services** - **default** to picking **ALIAS**
+- should be the same "Type" as what the record is pointing at
+- API Gateway, CloudFront, Elastic Beanstalk, ELB, Global Accelerator & S3
