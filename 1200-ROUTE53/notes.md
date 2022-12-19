@@ -67,3 +67,9 @@ Route53SimpleRouting-1.png
 - can be Endpoint, CloudWatch Alarm, Checks of Checks (Calculated) checks
 
 Route53HealthChecks.png
+
+### Failover Routing
+
+- failover routing lets you route traffic to a resource when the resource is healthy or to a different resource when the first resource is unhealthy
+
+Route53FailoverRouting-1.png
