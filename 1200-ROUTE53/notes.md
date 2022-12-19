@@ -56,3 +56,14 @@ _ALIAS Records_
 - Simple routing lets you configure standard DNS records, with no special Route 53 routing such as weighted or latency. With simple routing, you typically route traffic to a single resource, for example, to a web server for your website
 
 Route53SimpleRouting-1.png
+
+### R53 Health Checks
+
+- health check are **separate from**, but are **used by** records
+- health checkers located **globally**
+- health checkers check every 30s (every 10s costs extra)
+- can be TCP, HTTP/HTTPS, HTTP/HTTPS with String Matching
+- endpoint is either **Health** or **Unhealthy**
+- can be Endpoint, CloudWatch Alarm, Checks of Checks (Calculated) checks
+
+Route53HealthChecks.png
