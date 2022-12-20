@@ -143,3 +143,7 @@ _EBS Optimized_
 - EBS optimized means **dedicated capacity** for EBS
 - most instances **support** and have **enabled by default**
 - in older in instances some support, but enabling costs extra
+
+## Implementing DNSSEC with R53
+
+DNSSEC.png
