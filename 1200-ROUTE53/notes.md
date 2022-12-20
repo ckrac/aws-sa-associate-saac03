@@ -91,3 +91,15 @@ Route53WeightedRouting-1.png
 - If your application is hosted in multiple AWS Regions, you can improve performance for your users by serving their requests from the AWS Region that provides the lowest latency.
 
 Route53LatencyBasedRouting-1.png
+
+### Geolocation Routing
+
+- Geolocation routing lets you choose the resources that serve your traffic based on the geographic location of your users, meaning the location that DNS queries originate from.
+
+Route53GeolocationRouting-1.png
+
+### Geoproximity Routing
+
+- Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a bias. A bias expands or shrinks the size of the geographic region from which traffic is routed to a resource.
+
+Route53GeoProximityRouting-1.png
