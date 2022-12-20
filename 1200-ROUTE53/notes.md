@@ -79,3 +79,15 @@ Route53FailoverRouting-1.png
 - Multivalue answer routing lets you configure Amazon Route 53 to return multiple values, such as IP addresses for your web servers, in response to DNS queries. You can specify multiple values for almost any record, but multivalue answer routing also lets you check the health of each resource, so Route 53 returns only values for healthy resources
 
 Route53MultiValueRouting-1.png
+
+### Weighted Routing
+
+- Weighted routing lets you associate multiple resources with a single domain name (catagram.io) and choose how much traffic is routed to each resource. This can be useful for a variety of purposes, including load balancing and testing new versions of software.
+
+Route53WeightedRouting-1.png
+
+### Latency Routing
+
+- If your application is hosted in multiple AWS Regions, you can improve performance for your users by serving their requests from the AWS Region that provides the lowest latency.
+
+Route53LatencyBasedRouting-1.png
