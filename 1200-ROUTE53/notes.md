@@ -103,3 +103,19 @@ Route53GeolocationRouting-1.png
 - Geoproximity routing lets Amazon Route 53 route traffic to your resources based on the geographic location of your users and your resources. You can also optionally choose to route more traffic or less to a given resource by specifying a value, known as a bias. A bias expands or shrinks the size of the geographic region from which traffic is routed to a resource.
 
 Route53GeoProximityRouting-1.png
+
+### R53 Interoperability
+
+- using R53 to register domains or to host zone files, when the other part is not with R53
+- R53 normally has 2 jobs - **Domain registrar** and **Domain Hosting**
+- R53 can do **BOTH**, or either **Domain registrar** or **Domain Hosting**
+
+What happens when you register a domain using R53?
+
+- R53 accepts your money (**domain registration fee**)
+- R53 allocates 4 name servers (NS) (**domain hosting**)
+- R53 creates a zone file (**domain hosting**) on the above NS
+- R53 communicates with the registry of the TLD (**Domain Registrar**)
+- ...sets the NS records for the domain to point at the 4 NS above
+
+Route53Interoperability-[1-3].png
