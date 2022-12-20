@@ -146,4 +146,6 @@ _EBS Optimized_
 
 ## Implementing DNSSEC with R53
 
+- DNSSEC strengthens authentication in DNS using digital signatures based on public key cryptography. With DNSSEC, it's not DNS queries and responses themselves that are cryptographically signed, but rather DNS data itself is signed by the owner of the data. This video steps though how DNSSEC is implemented in AWS Route53 and demos DNSSEC signing enabling on a hosted zone, including trust chain establishment.
+
 DNSSEC.png
