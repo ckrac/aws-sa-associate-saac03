@@ -47,3 +47,24 @@ _Why you shouldn't really..._
 - EC2 is **ON** or **OFF** - no serverless, no easy scaling
 - **replication** - skills, setup time, monitoring & effectiveness
 - **performance** - AWS invest time into optimization & features
+
+### Relational Database Service (RDS) Architecture
+
+- Relational Database Service (RDS) is a Database(server) as a service product from AWS which allows the creation of managed databases instances
+- not what RDS - Database as a Service (**DBaaS**)
+- what it is - Database Server as a Service (**DBSaaS**)
+- ...multiple databases on one DB Server (instance)
+- choice of DB Engines (**MYSQL**, **MariaDB**, **PostgreSQL**, **Oracle**, Microsoft **SQL Server**)
+- ...Amazon Aurora is a different product
+- managed service... **no access** to **OS** or **SSH** Access
+
+RDSArch-[1].png
+
+_Costs_
+
+- cost #1 - **instance size** & **type**
+- cost #2 - **multi AZ** or not
+- cost #3 - **storage type** & **amount**
+- cost #4 - **data** transferred
+- cost #5 - backups & snapshots
+- cost #6 - licensing (if applicable)
