@@ -96,3 +96,27 @@ RDSMultiAZCluster.png
 - replication is done via transactions logs... more efficient
 - failover is faster - **35s** + **transaction log apply**
 - writes are "**committed**" when **1 reader** has confirmed
+
+### RDS Automatic Backup, RDS Snapshots and Restore
+
+- RDS is capable of performing Manual Snapshots and Automatic backups
+- manual snapshots are performed manually and live past the termination of an RDS instance
+- automatic backups can be taken of an RDS instance with a 0 (Disabled) to 35 Day retention
+- automatic backups also use S3 for storing transaction logs every 5 minutes - allowing for point in time recovery
+- snapshots can be restored .. but create a new RDS instance
+
+_Backups - Cross-Region_
+
+- RDS can **replicate** backups to **another region**
+- ...both **snapshots** and **transaction logs**
+- charges apply for the **cross-region data copy**
+- ...and the **storage** in the **destination region**
+- **NOT DEFAULT**... configured within automated backups
+
+_Restores_
+
+- creates a **NEW RDS Instance** - **new address**
+- snapshots = **single point in time**, creation time
+- automated = **any 5 minute point in time**
+- backup is restored and transaction logs are 'replayed' to bring DB to desired point in time (**GOOD RPO (Recovery Point Objective)**)
+- restores **aren't fast** - think about **RTO (Recovery Time Objective)** (**RR's**)
