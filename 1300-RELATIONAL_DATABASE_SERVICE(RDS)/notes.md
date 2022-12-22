@@ -68,3 +68,31 @@ _Costs_
 - cost #4 - **data** transferred
 - cost #5 - backups & snapshots
 - cost #6 - licensing (if applicable)
+
+### Relational Database Service (RDS) MultiAZ - Instance and Cluster
+
+- MultiAZ is a feature of RDS which provisions a highly available instance set.
+- the product provides MultiAZ instance .. where a standby replica is kept in sync Synchronously with the primary instance.The standby replica cannot be used for any performance scaling ... only availability.
+- it also provides MultiAZ cluster mode, where a write and two reader instances are kept in sync Synchronously. The reader instances can be used for read operations ..allowing for limited read scaling.
+- backups, software updates and restarts can take advantage of MultiAZ to reduce user disruption.
+
+RDSMultiAZInstance.png
+
+- Data => Primary **AND** Replicated to StandBy = **Committed** (**Synchronous**)
+- **not free tier**... extra cost for replica
+- **ONE** StandBy replica **ONLY**
+- ...which **can't be used** for reads or writes
+- job is for failover events, **60-120** seconds failover
+- **same region only**... different AZs in the same region
+- **backups** taken from **standby** to **improve performance**
+- AZ outage, Primary Failure, Manual failover, Instance type change and software patching
+
+RDSMultiAZCluster.png
+
+- **1 Writer** and **2 Reader** DB instances (different AZs)
+- ...much faster hardware, graviton + local **NVME SSD Storage**
+- ...fast writes to **local storage** => **flushed to EBS**
+- ...**readers** can be used for **reads**... allowing some **read scaling**
+- replication is done via transactions logs... more efficient
+- failover is faster - **35s** + **transaction log apply**
+- writes are "**committed**" when **1 reader** has confirmed
