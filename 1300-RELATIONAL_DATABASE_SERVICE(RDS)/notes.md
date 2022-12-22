@@ -120,3 +120,22 @@ _Restores_
 - automated = **any 5 minute point in time**
 - backup is restored and transaction logs are 'replayed' to bring DB to desired point in time (**GOOD RPO (Recovery Point Objective)**)
 - restores **aren't fast** - think about **RTO (Recovery Time Objective)** (**RR's**)
+
+### RDS Read Replicas
+
+- RDS Read Replicas can be added to an RDS Instance - **5** direct per primary instance.
+- they can be in the same region, or cross-region replicas
+- they **provide read performance scaling** for the instance, but also offer low RTO recovery for any instance failure issues
+- N.B they don't help with data corruption as the corruption will be replicated to the RR
+- read-replicas can gave read-replicas - **but lag starts to be a problem**
+- **global** performance improvements
+
+_RPO (Recovery POint Objective)/RTO (Recovery Time Objective) Improvements_
+
+- snapshots & backups improve **RPO**
+- **RTO's are a problem**
+- RR's offer **nr. 0 RPO** (near zero RPO)
+- RR's can be **promoted quickly** - **low RTO**
+- **failure only** - watch for data corruption
+- **read only - until promoted**
+- **global availability improvements... global resilience**
