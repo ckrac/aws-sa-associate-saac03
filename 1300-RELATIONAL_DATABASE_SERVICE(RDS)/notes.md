@@ -283,3 +283,35 @@ _Key facts_
 - can enforce **SSL**/**TLS**
 - can **reduce failover time** by **over 60%**
 - **abstracts failure** away from your applications
+
+### Database Migration Service (DMS)
+
+- Database Migration Service (DMS) is a managed service
+- which allows for 0 data loss, low or 0 downtime migrations between 2 database endpoints
+- runs using a **replication instance**
+- **source** and **destination endpoints** point at...
+- **source** and **target** databases
+- **one endpoint MUST be on AWS**
+
+Database Migration Service.png
+
+_Schema Conversion Tool (SCT)_
+
+- SCT is used when converting **one database** engine to **another**
+- ...including **DB** -> **S3** (Migrations using DMS)
+- SCT is **not used when migrating between DB's of the same type**
+- ..on-premises MySQL -> RDS MySQL
+- works with **OLTP** DB Types (MySQL, MSSQL, Oracly)
+- works with **OLAP** DB Types (Teratata, Oracle, Vertica, Greenplum...)
+- e.g. on-premises **MSSQL** -> **RDS MySQL**
+- e.g. on-premises **ORACLE** -> **Aurora**
+
+_(DMS) & Snowball_
+
+- larger migrations might be multi-TB in size
+- ...moving data over networks takes time and consumes capcacity
+- DMS can utilize snowball...
+- **Step 1**: Use SCT to extract data locally and move to a snowball device
+- **Step 2**: Ship the device back to AWS. They load onto an S3 bucket
+- **Step 3**: DMS migrates from S3 into the target store
+- **Step 4**: Change Data Capture (CDC) can capture changes, and via S3 intermediary they are also written to the target database
