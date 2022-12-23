@@ -139,3 +139,19 @@ _RPO (Recovery POint Objective)/RTO (Recovery Time Objective) Improvements_
 - **failure only** - watch for data corruption
 - **read only - until promoted**
 - **global availability improvements... global resilience**
+
+### Amazon RDS Security
+
+- **SSL**/**TLS** (**in transit**) is available for RDS, can be **mandatory**
+- RDS supports **EBS volume** encryption - **KMS**
+- handled by **HOST**/**EBS**
+- AWS or customer managed CMK generates **data keys**
+- **data keys** used for **encryption operations**
+- **storage**, **logs**, **snapshots** & **replicas** are encrypted
+- ...**encryption can't be removed**
+- RDS **MSSQL** and RDS **Oracle** Support **TDE (Transparent Data Encryption)**
+  - encryption handled **within the DB engine**
+- RDS **Oracle** supports integration with **CloudHSM**
+- much stronger key controls (even from AWS)
+
+RDSSecurity-[1-2].png
