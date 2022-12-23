@@ -220,3 +220,18 @@ _Use Cases_
 - **unpredictable** workloads
 - **development** and **test** databases
 - **multi-tenant** applications
+
+### Aurora Global Database
+
+- aurora global databases are a feature of Aurora Provisioned clusters which allow data to be replicated globally providing significant RPO and RTO improvements for BC and DR planning
+- additionally global databases can provide performance improvements for customers
+- ...with data being located closer to them, in a read-only form
+- great for **cross-region DR (disaster recovery) and BC (business continuity)**
+- **global read scaling - low latency performance improvements**
+- replication occurs at the storage layer and is generally **~1second or less** between all AWS regions
+- **no impact** on DB performance
+- secondary regions can have **16 replicas**
+- ...can be promoted to R/W
+- currently MAX 5 secondary regions...
+
+AuroraGlobalDB.png
