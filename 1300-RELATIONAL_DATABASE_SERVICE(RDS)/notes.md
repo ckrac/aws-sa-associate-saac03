@@ -155,3 +155,14 @@ _RPO (Recovery POint Objective)/RTO (Recovery Time Objective) Improvements_
 - much stronger key controls (even from AWS)
 
 RDSSecurity-[1-2].png
+
+### RDS (Relational Database Service) Custom
+
+- **fills the gap** between **RDS** and **EC2** running a DB Engine
+- **RDS** is **fully managed** - **OS/Engine access is limited**
+- DB on EC2 is self managed - but has overhead
+- currently works for **MS SQL** and **Oracle**
+- can connect using **SSH**, **RDP**, **Session Manager**
+- RDS Custom **Database Automation**
+- ...**pause** to customize (so there are no disruptions)
+- ...resume (**full automation**) for normal production usage
