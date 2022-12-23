@@ -235,3 +235,14 @@ _Use Cases_
 - currently MAX 5 secondary regions...
 
 AuroraGlobalDB.png
+
+### Multi-master writes
+
+- Multi-master write is a mode of Aurora Provisioned Clusters which allows multiple instances to perform reads and writes at the same time - rather than only one primary instance having write capability in a single-master cluster
+- default Aurora mode is **Single-Master**
+  - **1 R/W **and **0+ Read Only** replicas
+- cluster endpoint is used to write, read endpoint is used for load balanced reads
+- failover takes time - replica promoted to R/W
+- in multi-master mode **all instances are R/W**
+
+AuroraMultiMaster-[1-3].png
