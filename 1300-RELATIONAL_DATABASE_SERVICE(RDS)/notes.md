@@ -200,3 +200,23 @@ _Cost_
 - restores create a **new cluster**
 - backtrack can be used which allow **in-place rewinds** to a previous point in time
 - fast clones make a new database MUCH faster than copying all the data - **copy-on-write**
+
+### Aurora Serverless
+
+- scalable - **ACU** - Aurora Capacity Units
+- Aurora Serverless cluster has a **MIN & MAX ACU**
+- cluster adjusts based on load
+- can go to _0_ and be **paused**
+- consumption billing per-second basis
+- same resilience as Aurora (6 copies across AZs)
+
+AuroraServerless-1.png
+
+_Use Cases_
+
+- **infrequently** used applications
+- **new** applications
+- **variable** workloads
+- **unpredictable** workloads
+- **development** and **test** databases
+- **multi-tenant** applications
