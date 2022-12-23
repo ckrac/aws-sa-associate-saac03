@@ -246,3 +246,40 @@ AuroraGlobalDB.png
 - in multi-master mode **all instances are R/W**
 
 AuroraMultiMaster-[1-3].png
+
+### Relational Database Service (RDS) - RDS Proxy
+
+_Why?_
+
+- **opening** and **closing** connections **consume resources**
+- ...it takes **time**... which **creates latency**
+- with serverless... **every lambda** opens and closes?
+- handling **failure** of Database instances is **hard**...
+- ...doing it within your application **adds risks**
+- DB **Proxies** help... **managing** them is not trivial (**scaling**/**resilience**)
+- application(s) => Proxy (connection pooling) => Database
+
+_Architecture_
+
+RDSProxy.png
+
+_When?_
+
+- **too many connections** errors...
+- DB instances using T2/T3 (i.e. **smaller**/**burst**) **instances**
+- **AWS Lambda**... **time saved**/connection reuse & **IAM Auth**
+- long running connections (SAAS apps) - low latency
+- where **resilience** to database failure is a priority
+- ...RDS proxy can **reduce the time for failover**
+- ...and make it **transparent to the application**
+
+_Key facts_
+
+- **fully managed** DB **Proxy** for **RDS**/**Aurora**
+- ...**auto scaling**, **highly available** by default
+- provides **connection pooling** - reduces DB Load
+- ONLY **accessible** from **a VPC**
+- accessed via **Proxy Endpoint** - no app changes
+- can enforce **SSL**/**TLS**
+- can **reduce failover time** by **over 60%**
+- **abstracts failure** away from your applications
