@@ -166,3 +166,37 @@ RDSSecurity-[1-2].png
 - RDS Custom **Database Automation**
 - ...**pause** to customize (so there are no disruptions)
 - ...resume (**full automation**) for normal production usage
+
+### Aurora Architecture
+
+- aurora is a AWS designed database engine officially part of RDS
+- aurora implements a number of radical design changes which offer significant performance and feature improvements over other RDS database engines
+- aurora architecture is **VERY** different from RDS...
+- ...uses a "**Cluster**"
+- a single **primary** instance + **0** or more **replicas**
+- no local storage - uses **cluster volume**
+  - faster provisioning & improved availability & performance
+
+AuroraArch-1.png
+
+- all SSD Based - **high IOPS**, **low latency**
+- storage is billed based on **what's used**
+- **high water mark** - billed for the most used
+- storage which is freed up can be re-used
+- replicas can be added and removed without requiring storage provisioning
+
+AuroraArch-2.png
+
+_Cost_
+
+- no free-tier option
+- aurora doesn't support Micro Instances
+- beyond RDS singleAZ (micro) Aurora offers better value
+- compute - hourly charge, per second, 10 minute minimum
+- storage - GB-Month consumed, IO cost per request
+- 100% DB Size in backups are included
+
+- backups in Aurora work in the same way as RDS
+- restores create a **new cluster**
+- backtrack can be used which allow **in-place rewinds** to a previous point in time
+- fast clones make a new database MUCH faster than copying all the data - **copy-on-write**
