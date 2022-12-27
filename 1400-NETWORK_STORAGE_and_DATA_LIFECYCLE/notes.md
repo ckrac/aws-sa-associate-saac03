@@ -17,3 +17,11 @@ EFS-1.png
 - **bursting** and **provisioned** throughput modes
 - **standard** and **infrequent access (IA)** Classes
 - lifecycle policies can be used with classes
+
+https://en.wikipedia.org/wiki/File_system_permissions
+
+https://docs.aws.amazon.com/efs/latest/ug/performance.html
+
+https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html
+
+https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html
