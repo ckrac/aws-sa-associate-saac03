@@ -39,3 +39,50 @@ ELB-[1-3].png
 - EC2 **doesn't need to be public** to work with a LB
 - **listener** configuration controls **WHAT** the LB does
 - **8+** Free IPs per subnet, and **/27** subnet to allow scaling
+
+### Application Load Balancing (ALB) vs Network Load Balancing (NLB)
+
+ALBvsNLB-1.png
+
+_Application Load Balancer (**ALB**)_
+
+- **Layer 7** load balancer... listens on **HTTP** and/or **HTTPS**
+- **no other Layer 7 protocols** (SMTP, SSH, Gaming...)
+- ...and **NO TCP/UDP/TLS Listeners**
+- L7 content type, cookies, custom headers, user location and app behavior
+- HTTP HTTPS (SSL/TLS) always terminated on the ALB - **no unbroken SSL** (security teams!)
+- ...**a new connection** is made to the application
+- ALBs **MUST** have **SSL** certs if **HTTPS** is used
+- ALBs are **slower** than **NLB**... more levels of the network stack to process
+- health checks **evaluate application health**... layer 7
+
+_Application Load Balancer (**ALB**) - Rules_
+
+- rules **direct connections** which **arrive** at a **listener**
+- processed in **priority order**
+- **default rule** = **catchall**
+- **rule conditions**: host-header, http-header, http-request-method, path-pattern, query-string & source-ip
+- **actions**: forward, redirect, fixe-response, authenticate-oidc & authenticate-cognito
+
+ALBvsNLB-2.png
+
+_Network Load Balancer (**NLB**)_
+
+- **Layer 4 load balancer**... **TCP**, **TLS**, **UDP**, **TCP_UDP**
+- **no visibility** or **understanding** of **HTTP** or **HTTPS**
+- **no headers**, **no cookies**, **no session stickiness**
+- really really really fast (**millions of rps**, **25%** of **ALB latency**)
+- ...SMTP, SSH, Gamer Servers, financial apps (**not http/s**)
+- health checks **JUST** check ICMP/TCP Handshake... **not app aware**
+- NLB's can have **static IP's** - useful for whitelisting
+- **forward TCP** to instances... **unbroken encryption**
+- used with private link to provide services to other VPCs
+
+_**ALB** vs **NLB**_
+
+- unbroken encryption... NLB
+- static IP for whitelisting... NLB
+- the fastest performance... NLB (millions rps)
+- protocols not HTTP or HTTPS... NLB
+- privatelink... NLB
+- otherwise... ALB
