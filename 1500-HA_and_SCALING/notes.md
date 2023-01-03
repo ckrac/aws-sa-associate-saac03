@@ -97,3 +97,47 @@ _**ALB** vs **NLB**_
 - LT provide **newer features** - including T2/T3 Unlimited, Placement Groups, Capacity Reservations, Elastic Graphics
 
 LCandLT.png
+
+### Auto-Scaling Groups
+
+- **automatic scaling** and **self-healing** for EC2
+- uses **launch templates** or **configurations**
+- has a **minimum**, **desired** and **maximum** size (e.g. 1:2:4)
+- keep running instances at the **desired capacity** by **provisioning** or **terminating** instances
+- **scaling policies** automate based on metrics
+
+ASG-[1-2].png
+
+_Scaling Policies_
+
+- **manual** scaling - manually adjust the desired capacity
+- **scheduled** scaling - time based adjustment - e.g. sales...
+- **dynamic** scaling
+  - **simple** - "CPU above 50% + 1", "CPU below 50% - 1"
+  - **stepped** - bigger +/- based on difference
+  - **target tracking** - desired aggregate CPU = 40%... ASG handle it
+- **cooldown periods** - value in seconds, how long to wait at the end of a scaling action before doing another
+
+_ASG + Load Balancers_
+
+ASG-3.png
+
+_Scaling Processes_
+
+- **launch** and **terminate** - SUSPEND and RESUME
+- **AddToLoadBalancer** - add to LB on launch
+- **AlarmNotification** - accept notification from CW
+- **AZRebalance** - balances instances evenly across all of the AZs
+- **HealthCheck** - instance health checks on/off
+- **ReplaceUnhealthy** - terminate unhealthy and replace
+- **ScheduledActions** - schedule on/off
+- **Standby** - use this fir instances 'InService vs Standby'
+
+_Final points_
+
+- autoscaling groups are free
+- only the resources created are billed...
+- use cool downs to avoid rapid scaling
+- think about **more**, **smaller** instances - **granularity**
+- use with ALB's for elasticity - **abstraction**
+- ASG defines **WHEN** and **WHERE**, LT defines **WHAT**
