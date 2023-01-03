@@ -86,3 +86,14 @@ _**ALB** vs **NLB**_
 - protocols not HTTP or HTTPS... NLB
 - privatelink... NLB
 - otherwise... ALB
+
+### Launch Configuration and Templates
+
+- allow you to define the configuration of an EC2 instance **in advance**
+- AMI, Instance Type, Storage & Key pair
+- networking and security groups
+- userdata & IAM role
+- both are NOT editable - defined once. LT has versions
+- LT provide **newer features** - including T2/T3 Unlimited, Placement Groups, Capacity Reservations, Elastic Graphics
+
+LCandLT.png
