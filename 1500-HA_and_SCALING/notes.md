@@ -166,6 +166,12 @@ ASG-LifecycleHooks-1.png
 
 ### ASG HealthCheck Comparison - EC2 vs ELB
 
+- Amazon EC2 Auto Scaling can determine the health status of an instance using one or more of the following:
+
+  - status checks provided by Amazon EC2 to identify hardware and software issues that may impair an instance. The default health checks for an Auto Scaling group are EC2 status checks only
+  - health checks provided by Elastic Load Balancing (ELB). These health checks are disabled by default but can be enabled
+  - your custom health checks
+
 - **EC2** (**Default**), **ELB** (**Can be enabled**) & **Custom**
 - **EC2** - Stopping, Stopped, Terminated, Shutting Down or Impaired (not 2/2 status) = **UNHEALTHY**
 - **ELB** - HEALTHY = **Running** & **passing ELB health check**
