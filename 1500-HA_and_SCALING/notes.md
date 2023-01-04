@@ -141,3 +141,14 @@ _Final points_
 - think about **more**, **smaller** instances - **granularity**
 - use with ALB's for elasticity - **abstraction**
 - ASG defines **WHEN** and **WHERE**, LT defines **WHAT**
+
+### ASG Scaling Policies
+
+- ASGs don't NEED scaling policies - they can have none
+- **manual** - **min**, **max** & **desired** - testing & urgent
+- **simple scaling**
+- **step scaling**
+- **target tracking**
+- scaling based on **SQS** - **ApproximateNumberOfMessagesVisible**
+
+ASG-Policies-[1-2].png
