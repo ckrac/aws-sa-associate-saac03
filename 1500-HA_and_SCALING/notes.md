@@ -179,3 +179,9 @@ ASG-LifecycleHooks-1.png
 - **custom** - instances marked **healthy** & **unhealthy** by an external system
 - health check grace period (default **300s**) - **Delay before starting checks**
 - ...allows **system launch**, **bootstrapping** and **application start**
+
+### SSL Offload & Session Stickiness
+
+ELBListners.png
+
+SessionStickiness.png
