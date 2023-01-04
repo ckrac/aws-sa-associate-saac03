@@ -152,3 +152,14 @@ _Final points_
 - scaling based on **SQS** - **ApproximateNumberOfMessagesVisible**
 
 ASG-Policies-[1-2].png
+
+### ASG Lifecycle Hooks
+
+- **custom actions** on instances during **ASG actions**
+- ...**instance launch** or **instance terminate** transitions
+- instances are paused within the flow... they **wait**
+- ...until a timeout (then either **CONTINUE** or **ABANDON**)
+- ...or you resume the ASG process **CompleteLifecycleAction**
+- EventBridge or SNS Notifications
+
+ASG-LifecycleHooks-1.png
