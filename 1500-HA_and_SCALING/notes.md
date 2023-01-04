@@ -163,3 +163,13 @@ ASG-Policies-[1-2].png
 - EventBridge or SNS Notifications
 
 ASG-LifecycleHooks-1.png
+
+### ASG HealthCheck Comparison - EC2 vs ELB
+
+- **EC2** (**Default**), **ELB** (**Can be enabled**) & **Custom**
+- **EC2** - Stopping, Stopped, Terminated, Shutting Down or Impaired (not 2/2 status) = **UNHEALTHY**
+- **ELB** - HEALTHY = **Running** & **passing ELB health check**
+- ...can be more **application aware** (Layer 7)
+- **custom** - instances marked **healthy** & **unhealthy** by an external system
+- health check grace period (default **300s**) - **Delay before starting checks**
+- ...allows **system launch**, **bootstrapping** and **application start**
