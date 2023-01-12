@@ -148,3 +148,24 @@ _What about IPv6_
 - NAT Gateways **don't work with IPv6**
 - ::/0 Route + IGW for bi-directional connectivity
 - ::/0 Route + Egress-Only Internet Gateway - Outbound Only
+
+### Gateway Load Balancer
+
+_Why do we need a GWLB?_
+
+GWLB-1.png
+
+_GWLB... what is it?_
+
+- help you **run** and **scale** **3rd party appliances**
+- ...things like **firewalls**, **intrusion detection** and **prevention** systems
+- **inbound** and **outbound** traffic (**transparent** inspection and protection)
+- ...**GWLB endpoints**... traffic enters/leaves via these endpoints
+- ...the GWLB **balances** across **multiple backend appliances**
+- traffic and metadata is tunnelled using **GENEVE** protocol
+
+_GWLB 101 - How it works?_
+
+GWLB-2.png
+
+GWLB-3.png
