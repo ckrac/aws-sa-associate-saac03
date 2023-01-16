@@ -62,3 +62,15 @@ _Lambda Versions_
 _Lambda Startup Times_
 
 Lambda-8.png
+
+### CloudWatch Events and EventBridge
+
+- if **X** happens, or at **Y** time(s)... do **Z**
+- EventBridge is... CloudWatch Events v2(\*)
+- a **default** event bus for the account
+- ...in CloudWatch Events this is the only bus (**implicit**)
+- EventBridge can have additional event busses
+- rules match incoming events... (or schedules)
+- route the events to **1+ Targets**... eg. Lambda
+
+EventBridge-1.png
