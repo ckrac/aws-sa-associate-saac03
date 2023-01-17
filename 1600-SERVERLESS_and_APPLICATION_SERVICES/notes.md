@@ -88,3 +88,22 @@ _What is serverless_
 - **managed services** are used where possible
 
 Serverless-1.png
+
+### Simple Notification Service (SNS)
+
+- **Public AWS Service** - network connectivity with Public Endpoint
+- coordinates the sending and delivery of **messages**
+- messages are <= **256KB** payloads
+- **SNS Topics** are the base entity of SNS - **permissions** and **configuration**
+- a **Publisher sends** messaged to a **TOPIC**
+- **TOPICS** have **Subscribers** which **receive** messages
+- e.g. HTTP(s), Email(-JSON), SQS, Mobile Push, SMS Messages & Lambda
+- SNS used across AWS for notifications - e.g. CloudWatch & CloudFormation
+
+SNS-1.png
+
+- Delivery **Status** - (including HTTP, Lambda, SQS)
+- Delivery **Retries** - Reliable Delivery
+- **HA** and **Scalable** (Region)
+- Server Side Encryption (**SSE**)
+- Cross-Account via **TOPIC Policy**
