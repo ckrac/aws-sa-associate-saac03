@@ -74,3 +74,17 @@ Lambda-8.png
 - route the events to **1+ Targets**... eg. Lambda
 
 EventBridge-1.png
+
+### Serverless Architecture
+
+_What is serverless_
+
+- serverless **isn't one single thing**
+- you manage **few**, **if any** servers - low overhead
+- applications are a collection of small & specialized functions
+- ...**stateless** and **ephemeral** environments - duration billing
+- **event-driven**... consumption only when being used
+- **FaaS** is used where possible for compute functionality
+- **managed services** are used where possible
+
+Serverless-1.png
