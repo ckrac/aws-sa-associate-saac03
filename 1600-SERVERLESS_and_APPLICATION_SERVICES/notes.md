@@ -107,3 +107,36 @@ SNS-1.png
 - **HA** and **Scalable** (Region)
 - Server Side Encryption (**SSE**)
 - Cross-Account via **TOPIC Policy**
+
+### Step Functions
+
+_Some problems with Lambda_
+
+- Lambda is **FaaS**
+- **15-minute max** execution time
+- can be chained together
+- gets messy at scale
+- runtime environments are **stateless**
+
+_State Machines_
+
+- serverless workflow... **START** -> **STATES** -> **END**
+- states are **THINGS** which occur
+- maximum duration **1 year**
+- **Standard** Workflow and **Express** Workflow
+- started via API Gateway, IOT Rules, EventBridge, Lambda...
+- Amazon States Language (**ASL**) - JSON Template
+- **IAM Role** is used for permissions
+
+_States_
+
+- SUCCEED & FAIL
+- WAIT
+- CHOICE
+- PARALLEL
+- MAP
+- TASK (Lambda, Batch, DynamicDB, ECS, SNS, SQS, Glue, SageMaker, EMR, Step Functions)
+
+_Step Functions_
+
+StepFunctions.png
