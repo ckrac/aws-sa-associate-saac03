@@ -140,3 +140,47 @@ _States_
 _Step Functions_
 
 StepFunctions.png
+
+### API Gateway
+
+_API Gateway - 101_
+
+- service that **create** and **manage** APIs
+- **endpoint**/entry-pint for applications
+- sits **between applications** & **integrations** (services)
+- highly **available**, **scalable**, handles **authorization**, **throttling**, **caching**, **CORS**, **transformations**, **OpenAPI** spec, **direct integration** and much more
+- can connect to services/endpoints in **AWS** or **on-premises**
+- **HTTP** APIs, **REST** APIs and **WebSocket** APIs
+
+_Overview_
+
+APIGateway-1.png
+
+_Authentication_
+
+APIGateway-2.png
+
+_Endpoint Types_
+
+- **edge-optimized** - routed to the nearest CloudFront POP
+- **regional** - clients in the same region
+- **private** - endpoint accessible only within a VPC via interface endpoint
+
+_Stages_
+
+APIGateway-3.png
+
+_Errors_
+
+- **4xx** - **Client Error** - Invalid request on **client** side
+- **5xx** - **Server Error** - valid request, **backend** issue
+- **400** - Bad Request - Generic
+- **403** - Access Denied - Authorizer denies... WAF Filtered
+- **429** - API Gateway can throttle - this means you've exceeded that amount
+- **502** - Bad Gateway Exception - bad output returned by lambda
+- **503** - Service Unavailable - backing endpoint offline? Major service issues
+- **504** - Integration Failure/Timeout - 29s limit
+
+_Caching_
+
+APIGateway-4.png
