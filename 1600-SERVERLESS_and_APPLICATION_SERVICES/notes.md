@@ -204,3 +204,7 @@ SQS-2.png **Fanout Architecture**
 - **short** (immediate) vs **long** (**waitTimeSeconds**) polling
 - encryption at rest (**KMS**) & in-transit
 - queue policy... access to queue, can allow to external accounts
+
+### SQS Standard vs FIFO Queues
+
+FIFOvsStandard.png
