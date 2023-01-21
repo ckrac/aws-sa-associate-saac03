@@ -208,3 +208,10 @@ SQS-2.png **Fanout Architecture**
 ### SQS Standard vs FIFO Queues
 
 FIFOvsStandard.png
+
+### SQS Delay Queues
+
+- delay queues provide an initial period of invisibility for messages
+- predefine periods can ensure that processing of messages doesn't begin until this period has expired
+
+SQSDelayQueues.png
