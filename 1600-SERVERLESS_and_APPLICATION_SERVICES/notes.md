@@ -184,3 +184,23 @@ _Errors_
 _Caching_
 
 APIGateway-4.png
+
+### Simple Queue Service
+
+- public, fully managed, highly-available queues - **Standard** or **FIFO**
+- messages up to **256KB** in size - **link** to large data
+- received messages are **hidden** (**VisibilityTimeout**)
+- ...then either reappear (retry) or are explicitly deleted
+- **dead-letter queues** can be used for problem messages
+- ASGs can scale and Lambdas invoke based on queue length
+
+SQS-1.png
+SQS-2.png **Fanout Architecture**
+
+- standard = **at-least-once**, FIFO (First-In-First-Out) = **exactly-once** and **guaranteed order**
+- FIFO (performance) **3,000 messages per second** with batching, or up to **300 messages per second without**
+- billed based on 'requests'
+- 1 request = 1-10 messages up to 64KB total
+- **short** (immediate) vs **long** (**waitTimeSeconds**) polling
+- encryption at rest (**KMS**) & in-transit
+- queue policy... access to queue, can allow to external accounts
