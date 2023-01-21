@@ -215,3 +215,10 @@ FIFOvsStandard.png
 - predefine periods can ensure that processing of messages doesn't begin until this period has expired
 
 SQSDelayQueues.png
+
+### SQS Dead-Letter Queues
+
+- Dead letter queues allow for messages which are causing repeated processing errors to be moved into a dead letter queue
+- in this queue, different processing methods, diagnostic methods or logging methods can be used to identity message faults
+
+SQSDeadLetterQueues.png
