@@ -291,3 +291,25 @@ _When and Where_
 - integrates with other AWS services e.g. **Rekognition** and **Connect**
 
 KinesisVideoStreams.png
+
+### Amazon Cognito - User and Identity Pools
+
+- cognito has terrible naming...
+- **authentication**, **authorization**, and **user management** for web/mobile apps
+- **USER POOLS** - **Sign-in** and get a JSON Web Token (**JWT**)
+- User directory management and profiles, sign-up & sign-in (customizable web UI), MFA and other security features
+- **IDENTITY POOLS** - Allow you to offer access to **Temporary AWS Credentials**
+- **unauthenticated identities** - guest users
+- **federated identities** - SWAP - Google, Facebook, Twitter, SAML2.0 & User Pool for short term AWS Credentials to access AWS Resources
+
+_User Pools_
+
+Cognito-1.png
+
+_Identity Pools_
+
+Cognito-2.png
+
+_User & Identity Pools_
+
+Cognito-3.png
