@@ -259,3 +259,24 @@ _SQS vs Kinesis_
 _Architecture_
 
 KinesisFirehose-1.png
+
+### Kinesis Data Analytics
+
+- **real time processing** of data
+- ...using structured query language (**SQL**)
+- ingests from **Kinesis Data Streams** or **Firehose**
+- destinations
+- **Firehose** (S3, Redshift, ElasticSearch, Splunk)
+- AWS **Lambda**
+- Kinesis **Data Streams**
+
+_Architecture_
+
+KinesisDataAnalytics-1.png
+
+_When and Where_
+
+- streaming data needing **real-time SQL processing**
+- time-series analytics ...**elections** / **e-sports**
+- real-time dashboards - **leader boards** for games
+- real-time metrics - **security** & **response** teams
