@@ -313,3 +313,23 @@ Cognito-2.png
 _User & Identity Pools_
 
 Cognito-3.png
+
+### AWS Glue
+
+- **serverless ETL** (**Extract**, **Transform** & **Load**)
+- ...vs **datapipeline** (which can do ETL) and uses servers (**EMR**)
+- **moves** and **transforms** data between **source** and **destination**
+- crawls data sources and generates the AWS **Glue Data catalog**
+- Data **Source**: **Stores**: S3, RDS, JDBC Compatible & Dynamo DB
+- Data **Source**: **Streams**: Kinesis Data Stream & Apache Kafka
+- Data **Targets**: S3, RDS, JDBC Databases
+
+_Data Catalog_
+
+- **persistent metadata** about data sources in region
+- **one catalog** per **region** per **account**
+- **avoids data silos**...
+- Amazon Athena, Redshift Spectrum, EMR & AWS Lake Formation all use Data Catalog
+- ...configure **crawlers** for data sources
+
+Glue.png
