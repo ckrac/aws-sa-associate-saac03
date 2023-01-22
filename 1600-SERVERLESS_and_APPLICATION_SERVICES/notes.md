@@ -247,3 +247,15 @@ _SQS vs Kinesis_
 - kinesis designed for **huge scale ingestion**
   - ...and **multiple consumers**... **rolling window**
   - data **ingestion**, **analytics**, **monitoring**, **app clicks**
+
+### Kinesis Data Firehose
+
+- fully managed service to load data for **data lakes**, **data stores** and **analytics services**
+- **automatic scaling** ...fully **serverless** ...**resilient**
+- **near real time** delivery (**60 seconds**)
+- supports **transformation** of data on the fly (**lambda**)
+- **billing** - **volume** through firehose
+
+_Architecture_
+
+KinesisFirehose-1.png
