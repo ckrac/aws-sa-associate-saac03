@@ -280,3 +280,14 @@ _When and Where_
 - time-series analytics ...**elections** / **e-sports**
 - real-time dashboards - **leader boards** for games
 - real-time metrics - **security** & **response** teams
+
+### Kinesis Video Streams
+
+- ingest **live video** data from **producers**
+- **security cameras**, **smartphones**, **cars**, **drones**, **time-serialized**, **audio**, **thermal**, **depth**, and **RADAR** data
+- consumers can access data **frame-by-frame** ... or as **needed**
+- can **persist** and **encrypt** (in-transit and at rest) data...
+- ...**can't access directly via storage ...only via APIs**
+- integrates with other AWS services e.g. **Rekognition** and **Connect**
+
+KinesisVideoStreams.png
