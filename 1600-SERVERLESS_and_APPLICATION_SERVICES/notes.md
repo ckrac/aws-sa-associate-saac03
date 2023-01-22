@@ -222,3 +222,28 @@ SQSDelayQueues.png
 - in this queue, different processing methods, diagnostic methods or logging methods can be used to identity message faults
 
 SQSDeadLetterQueues.png
+
+### Kinesis Data Streams
+
+_Kinesis Concepts_
+
+- kinesis is a **scalable streaming** service
+- producers _send_ data into a kinesis **stream**
+- streams can scale from low to near infinite data rates
+- public service & highly available by design
+- streams store a **24-hour** moving window of data
+- ...can be increased to a maximum of **365 days** (additional cost)
+- multiple consumers access data from that moving window
+
+_Architecture_
+
+Kinesis.png
+
+_SQS vs Kinesis_
+
+- SQS **1** production group, **1** consumption group
+  - **decoupling** and **asynchronous** communications
+  - **no persistence** of messages, **no window**
+- kinesis designed for **huge scale ingestion**
+  - ...and **multiple consumers**... **rolling window**
+  - data **ingestion**, **analytics**, **monitoring**, **app clicks**
