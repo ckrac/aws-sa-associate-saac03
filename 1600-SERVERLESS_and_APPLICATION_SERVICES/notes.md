@@ -333,3 +333,32 @@ _Data Catalog_
 - ...configure **crawlers** for data sources
 
 Glue.png
+
+### Amazon MQ 101
+
+- **SNS** and **SQS** are **_AWS services_** - using **AWS APIs**
+- SNS provides **TOPICS** and SQS provides **QUEUES**
+- **public services**... **highly scalable**... **AWS Integrated**
+- **many ORGS already use topics and queues**
+- ...and want to **migrate into AWS**
+- ...SNS and SQS won't work out of the box
+- we need a **standards compliant** solution for **migration**
+
+- an open-source message broker
+- based on managed **Apache ActiveMQ**
+- ...**JMS API** ...protocols such as **AMQP**, **MQTT**, **OpenWire** and **STOMP**
+- provides **QUEUES** and **TOPICS**
+- one-to-one or one-to-many
+- **single instance** (Test, Dev, Cheap) or **HA Pair** (Active/Standby)
+- VPC Based - **NOT A PUBLIC SERVICE** - **Private networking required**
+- no AWS native integration ...delivers activeMQ product which you manage
+
+_Architecture_
+
+AmazonMQ.png
+
+- **SNS** or **SQS** for most **new** implementations (**default**)
+- **SNS** or **SQS** if **AWS integration is required** (logging, permissions, encryption, service integration)
+- **Amazon MQ** If you need to **migrate from an existing system** with **little to no application change**encryption, service
+- **Amazon MQ** If APIs such as **JMS** or protocols such as **AMQP**, **MQTT**, **OpenWIre**, and **STOMP** are needed
+- **remember you need private networking for Amazon MQ**
